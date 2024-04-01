@@ -8,6 +8,8 @@ const todoItemsController = require('../controllers/todoItems.js');
 
 router.get('/',todoItemsController.get);
 
+router.get('/:id',todoItemsController.getById);
+
 router.post('/',todoItemValidator, (req, res)=>{
     const errors = validationResult(req);
     if(errors.isEmpty()){

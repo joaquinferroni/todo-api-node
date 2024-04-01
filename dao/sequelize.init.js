@@ -4,8 +4,6 @@ const database = require('./config');
 
 
 
-
-initialize();
 const sequelize = new Sequelize(database.dbName, 'root', 'root', {
   host:'localhost',
   dialect: 'mysql',
@@ -19,4 +17,4 @@ async function initialize() {
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${dbName}\`;`);
 }
 
-module.exports = sequelize;
+module.exports = {sequelize, initialize};

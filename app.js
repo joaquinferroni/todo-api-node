@@ -7,7 +7,6 @@ const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('./swagger-output.json')
 const app = express();
 
-const port = process.env.port || 3000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));

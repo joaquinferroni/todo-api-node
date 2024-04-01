@@ -76,11 +76,33 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
     },
     "/todoItems/{id}": {
+      "get": {
+        "tags": [
+          "TodoItems"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "put": {
         "tags": [
           "TodoItems"
@@ -129,6 +151,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }

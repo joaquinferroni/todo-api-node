@@ -1,4 +1,4 @@
-const sequelize =require('../dao/sequelize.init');
+const {sequelize} = require('../dao/sequelize.init');
 const{ DataTypes } =  require('sequelize');
 
 

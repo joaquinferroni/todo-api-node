@@ -6,6 +6,15 @@ const get = async function(req, res){
     return res.send(items);
 }
 
+const getById = async function(req, res){
+    /*  #swagger.tags = ['TodoItems'] */ 
+    const item = await todoItemService.get(req.params['id']);
+    if(!item){
+        return res.status(404).send();
+    }
+    return res.send(item);
+}
+
 const post = async function(req,res){
     /*  #swagger.tags = ['TodoItems'] 
         #swagger.parameters['body'] = {
@@ -60,6 +69,7 @@ const remove = async function(req, res){
 
 module.exports = {
     get,
+    getById,
     post,
     put,
     remove
