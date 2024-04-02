@@ -1,16 +1,16 @@
 const request = require('supertest');
 const app = require('../../app');
-const todoEventSeeder = require('../../seeders/todoListSeeder');
+const todoEventSeeder = require('../seeders/todoListSeeder');
 
-jest.mock('../../dao/config', () => {
-    const originalModule = jest.requireActual('../../dao/config');
+jest.mock('../../src/dao/config', () => {
+    const originalModule = jest.requireActual('../../src/dao/config');
     return {
       __esModule: true,
       ...originalModule,
       dbName: 'nodejstest-integrations'
     };
   });
-const {sequelize,initialize} = require('../../dao/sequelize.init');
+const {sequelize,initialize} = require('../../src/dao/sequelize.init');
 
 
 describe('Todo Item Routes',()=>{

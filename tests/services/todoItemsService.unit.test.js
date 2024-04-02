@@ -1,8 +1,8 @@
 
-const todoItemService = require('../../services/todoItemsService');
-const todoItemModel = require('../../models/todoItem.model');   
+const todoItemService = require('../../src/services/todoItemsService');
+const todoItemModel = require('../../src/models/todoItem.model');   
 
-jest.mock('../../models/todoItem.model');
+jest.mock('../../src/models/todoItem.model');
 
 describe('Todo Items Get', ()=> {
     describe('Get All', ()=>{

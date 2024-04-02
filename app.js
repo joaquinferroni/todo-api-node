@@ -16,7 +16,7 @@ app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,'/public/')));
 app.set('view engine', 'ejs');
 
-const routes = require('./routes/index.route.js');
+const routes = require('./src/routes/index.route.js');
 app.use(routes);
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))

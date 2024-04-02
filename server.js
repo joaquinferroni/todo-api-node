@@ -1,5 +1,5 @@
 const app = require('./app');
-const {sequelize,initialize} = require('./dao/sequelize.init');
+const {sequelize,initialize} = require('./src/dao/sequelize.init');
 
 const port = process.env.PORT || 3000;
 
